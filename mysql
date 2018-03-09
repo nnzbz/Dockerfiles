@@ -13,7 +13,7 @@ RUN apt-get update && \
     locale-gen C.UTF-8 && \
     /usr/sbin/update-locale LANG=C.UTF-8 && \
     apt-get remove -y locales
-
+# 设置utf-8，统一编码格式
 ENV LANG C.UTF-8
 
 # 修改权限
