@@ -12,7 +12,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ENV LC_ALL en_US.UTF-8
 
 # 复制jre
-ADD server-jre-8u162-linux-x64.tar.gz /usr/local/jvm
+ADD http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/server-jre-8u162-linux-x64.tar.gz /usr/local/jvm
 
 # 设置环境变量
 ENV JAVA_HOME /usr/local/jvm/jdk1.8.0_162
