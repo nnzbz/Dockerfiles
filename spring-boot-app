@@ -1,0 +1,13 @@
+# 基础镜像
+FROM nnzbz/centos-jre
+# 作者及邮箱
+MAINTAINER zbz <nnzbz@163.com>
+
+# 定义环境变量：服务启动的端口号(缺省值0，随机生成端口号）
+ENV SERVER_PORT 0
+
+# 设置工作目录
+WORKDIR /usr/local/myservice
+
+# 运行服务
+ENTRYPOINT ["/bin/bash", "-c", "java -Djava.security.egd=file:/dev/./urandom -server -jar myservice.jar"]
