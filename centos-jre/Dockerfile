@@ -14,7 +14,7 @@ ENV LC_ALL en_US.UTF-8
 # 加入jre
 ADD server-jre-8u172-linux-x64.tar.gz /usr/local/jvm
 # 加入JCE
-ADD UnlimitedJCEPolicyJDK8/*.jar /usr/local/jvm/jdk1.8.0_172/lib/security
+ADD jce_policy-8.zip/UnlimitedJCEPolicyJDK8/*.jar /usr/local/jvm/jdk1.8.0_172/lib/security
 
 # 设置环境变量
 ENV JAVA_HOME /usr/local/jvm/jdk1.8.0_172
