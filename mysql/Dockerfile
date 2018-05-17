@@ -1,5 +1,5 @@
 # 选择一个已有的os镜像作为基础
-FROM mysql
+FROM mysql:5
 # 镜像的作者和邮箱
 MAINTAINER zbz "nnzbz@163.com"
 
@@ -20,8 +20,8 @@ ENV LANG C.UTF-8
 RUN chmod 1777 -R /tmp
 
 # 创建安全文件夹并设置权限
-RUN mkdir -p /var/lib/mysql-files
-RUN chmod 1775 -R /var/lib/mysql-files
+#RUN mkdir -p /var/lib/mysql-files
+#RUN chmod 1777 -R /var/lib/mysql-files
 
 
 # 修改my.cnf文件支持utf-8
