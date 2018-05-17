@@ -19,6 +19,11 @@ ENV LANG C.UTF-8
 # 修改权限
 RUN chmod 1777 -R /tmp
 
+# 创建安全文件夹并设置权限
+RUN mkdir -p /var/lib/mysql-files
+RUN chmod 1775 -R /var/lib/mysql-files
+
+
 # 修改my.cnf文件支持utf-8
 RUN mv /etc/mysql/my.cnf /etc/mysql/my.cnf.bak
 RUN echo "[client]" >>/etc/mysql/my.cnf

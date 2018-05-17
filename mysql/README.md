@@ -1,11 +1,13 @@
-# 特性
+# nnzbz/mysql
+
+## 1. 特性
 
 1. mysql
 2. TZ=Asia/Shanghai
 3. C.UTF-8
 4. my.cnf -> utf8mb4
 
-# 创建并运行容器
+## 2. 创建并运行容器
 
 ```sh
 # 创建MySQL的数据卷
