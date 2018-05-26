@@ -7,4 +7,4 @@ MAINTAINER zbz <nnzbz@163.com>
 WORKDIR /usr/local/myservice
 
 # 运行服务
-ENTRYPOINT ["/bin/bash", "-c", "java -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC  -server -jar myservice.jar"]
+ENTRYPOINT ["/bin/bash", "-c", "java -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC  -server -jar myservice.jar"]
