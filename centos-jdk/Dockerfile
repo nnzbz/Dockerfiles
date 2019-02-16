@@ -18,7 +18,7 @@ ENV LC_ALL en_US.UTF-8
 
 # 加入jre（docker好像并不支持解压此版本的压缩文件）
 # ADD jdk-8u202-linux-x64.tar.gz /usr/local/jvm
-COPY jdk1.8.0_202/ /usr/local/jvm
+COPY jdk1.8.0_202/ /usr/local/jvm/jdk1.8.0_202
 # 加入JCE
 COPY UnlimitedJCEPolicyJDK8/*.jar /usr/local/jvm/jdk1.8.0_202/lib/security/
 # 加入供jstatd监控使用的安全策略文件
