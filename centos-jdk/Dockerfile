@@ -16,8 +16,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # 设置utf-8，统一编码格式
 ENV LC_ALL en_US.UTF-8
 
-# 加入jre
-ADD jdk-8u202-linux-x64.tar.gz /usr/local/jvm/
+# 加入jre（注意后面目录的路径不要有斜杠）
+ADD jdk-8u202-linux-x64.tar.gz /usr/local/jvm
 # 加入JCE
 # ADD UnlimitedJCEPolicyJDK8/*.jar /usr/local/jvm/jdk1.8.0_202/lib/security/
 # 加入供jstatd监控使用的安全策略文件

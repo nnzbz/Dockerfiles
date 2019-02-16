@@ -13,7 +13,19 @@
 5. en_US.UTF-8
 6. JAVA_HOME=/usr/local/jvm/jdk1.8.0_202/
 
-## 3. 如果要运行jstatd监控
+## 3. 创建并运行容器
+
+```sh
+docker run -d --name centos-jdk -it nnzbz/centos-jdk /bin/sh
+```
+
+## 4. 进入容器
+
+```sh
+docker exec -it centos-jdk /bin/bash
+```
+
+## 5. 如果要运行jstatd监控
 
 进入容器中，执行如下命令（注意不能退出）
 
