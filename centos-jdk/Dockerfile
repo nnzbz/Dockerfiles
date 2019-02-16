@@ -17,11 +17,11 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ENV LC_ALL en_US.UTF-8
 
 # 加入jre
-ADD jdk-8u202-linux-x64.tar.gz /usr/local/jvm
+ADD jdk-8u202-linux-x64.tar.gz /usr/local/jvm/
 # 加入JCE
-ADD UnlimitedJCEPolicyJDK8/*.jar /usr/local/jvm/jdk1.8.0_202/lib/security/
+# ADD UnlimitedJCEPolicyJDK8/*.jar /usr/local/jvm/jdk1.8.0_202/lib/security/
 # 加入供jstatd监控使用的安全策略文件
-ADD jstatd.all.policy /usr/local/jvm
+COPY jstatd.all.policy /usr/local/jvm/
 
 # 设置环境变量
 ENV JAVA_HOME /usr/local/jvm/jdk1.8.0_202
