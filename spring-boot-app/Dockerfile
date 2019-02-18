@@ -14,7 +14,7 @@ LABEL description="Environment for Spring Boot Appication\
 WORKDIR /usr/local/myservice
 
 # 设置最大内存和最小内存
-ENV JAVA_OPTS="-Xmx800m"
+ENV JAVA_OPTS="\ -Xmx800m \ -Xms200m"
 
 # 运行服务
 ENTRYPOINT ["/bin/bash", "-c", "java ${JAVA_OPTS} -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC  -server -jar myservice.jar"]
