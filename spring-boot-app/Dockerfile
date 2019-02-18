@@ -1,7 +1,14 @@
 # 基础镜像
-FROM nnzbz/centos-jre
+FROM nnzbz/centos-jdk:1.0.0
+
 # 作者及邮箱
-MAINTAINER zbz <nnzbz@163.com>
+# 镜像的作者和邮箱
+LABEL maintainer="nnzbz@163.com"
+# 镜像的版本
+LABEL version="1.0.0"
+# 镜像的描述
+LABEL description="Environment for Spring Boot Appication\
+为运行Spring Boot Application而提供的环境"
 
 # 设置工作目录
 WORKDIR /usr/local/myservice

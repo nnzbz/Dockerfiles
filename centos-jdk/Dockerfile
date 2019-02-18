@@ -4,7 +4,7 @@ FROM centos:7
 # 镜像的作者和邮箱
 LABEL maintainer="nnzbz@163.com"
 # 镜像的版本
-LABEL version="1.0"
+LABEL version="1.0.0"
 # 镜像的描述
 LABEL description="base CentOS7 and integrate JDK8 \
 基于CentOS7系统，集成了JDK8的环境"
