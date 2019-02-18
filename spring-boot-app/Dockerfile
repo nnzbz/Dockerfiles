@@ -13,6 +13,7 @@ LABEL description="Environment for Spring Boot Appication\
 # 设置工作目录
 WORKDIR /usr/local/myservice
 
+# 设置最大内存和最小内存
 ENV JAVA_OPTS="\
 -Xmx800m \
 -Xms200m \"
