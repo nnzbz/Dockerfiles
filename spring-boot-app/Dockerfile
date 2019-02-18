@@ -14,4 +14,4 @@ LABEL description="Environment for Spring Boot Appication\
 WORKDIR /usr/local/myservice
 
 # 运行服务
-ENTRYPOINT ["/bin/bash", "-c", "java -Xmx500m -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC  -server -jar myservice.jar"]
+ENTRYPOINT ["/bin/bash", "-c", "java ${JAVA_OPTS} -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC  -server -jar myservice.jar"]
