@@ -17,4 +17,4 @@ WORKDIR /usr/local/myservice
 ENV JAVA_OPTS="\ -Xmx800m \ -Xms200m"
 
 # 运行服务
-ENTRYPOINT ["/bin/bash", "-c", "java -Xmx800m -Xms200m -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC  -server -jar myservice.jar"]
+ENTRYPOINT ["/bin/bash", "-c", "java -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC -Xmx800m -Xms200m -server -jar myservice.jar"]
