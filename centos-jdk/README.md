@@ -32,13 +32,13 @@ docker exec -it centos-jdk /bin/bash
 如果要前台运行（注意Ctrl+C则会关闭程序，直接关闭命令行则不会）
 
 ```sh
-jstatd -J-Djava.rmi.server.hostname=192.168.1.203 -J-Dcom.sun.management.jmxremote.authenticate=false -J-Dcom.sun.management.jmxremote.ssl=false -J-Djava.security.policy=/usr/local/jvm/jstatd.all.policy
+jstatd -J-Djava.rmi.server.hostname=<ip> -J-Dcom.sun.management.jmxremote.authenticate=false -J-Dcom.sun.management.jmxremote.rmi.port=1099 -J-Dcom.sun.management.jmxremote.ssl=false -J-Djava.security.policy=/usr/local/jvm/jstatd.all.policy
 ```
 
 如果要后台运行
 
 ```sh
-nohup jstatd -J-Djava.rmi.server.hostname=192.168.1.203 -J-Dcom.sun.management.jmxremote.authenticate=false -J-Dcom.sun.management.jmxremote.ssl=false -J-Djava.security.policy=/usr/local/jvm/jstatd.all.policy >> /usr/local/output.log 2>&1 &
+nohup jstatd -J-Djava.rmi.server.hostname=<ip> -J-Dcom.sun.management.jmxremote.authenticate=false -J-Dcom.sun.management.jmxremote.rmi.port=1099 -J-Dcom.sun.management.jmxremote.ssl=false -J-Djava.security.policy=/usr/local/jvm/jstatd.all.policy >> /usr/local/output.log 2>&1 &
 ```
 
 - -J-Djava.rmi.server.hostname一定要填写正确的docker容器的宿主IP地址

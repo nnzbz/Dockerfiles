@@ -13,5 +13,7 @@ LABEL description="Environment for Spring Boot Appication\
 # 设置工作目录
 WORKDIR /usr/local/myservice
 
+ENV JAVA_OPTS=""
+
 # 运行服务
-ENTRYPOINT ["/bin/bash", "-c", "java -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC  -server -jar myservice.jar"]
+ENTRYPOINT ["/bin/bash", "-c", "java ${JAVA_OPTS} -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC -server -jar myservice.jar"]
