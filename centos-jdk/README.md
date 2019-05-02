@@ -29,7 +29,7 @@ docker exec -it centos-jdk /bin/bash
 
 进入容器中，执行如下命令
 
-如果要前台运行（注意Ctrl+C则会关闭程序，直接关闭命令行容器则不会）
+如果要前台运行（注意Ctrl+C则会关闭程序，直接关闭命令行则不会）
 
 ```sh
 jstatd -J-Djava.rmi.server.hostname=192.168.1.203 -J-Dcom.sun.management.jmxremote.authenticate=false -J-Dcom.sun.management.jmxremote.ssl=false -J-Djava.security.policy=/usr/local/jvm/jstatd.all.policy
