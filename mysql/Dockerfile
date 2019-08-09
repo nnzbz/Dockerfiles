@@ -1,7 +1,12 @@
 # 选择一个已有的os镜像作为基础
 FROM mysql:5
 # 镜像的作者和邮箱
-MAINTAINER zbz "nnzbz@163.com"
+LABEL maintainer="nnzbz@163.com"
+# 镜像的版本
+LABEL version="1.0.0"
+# 镜像的描述
+LABEL description="custom mysql \
+自定义MySQL的环境"
 
 # 时区修改为上海
 ENV TZ=Asia/Shanghai

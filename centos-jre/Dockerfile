@@ -1,8 +1,13 @@
 # 选择一个已有的os镜像作为基础
-FROM centos
+FROM centos:7
 
 # 镜像的作者和邮箱
-MAINTAINER zbz "nnzbz@163.com"
+LABEL maintainer="nnzbz@163.com"
+# 镜像的版本
+LABEL version="1.0.0"
+# 镜像的描述
+LABEL description="base CentOS7 and integrate JRE8 \
+基于CentOS7系统，集成了JRE8的环境"
 
 # 时区修改为上海
 ENV TZ=Asia/Shanghai
