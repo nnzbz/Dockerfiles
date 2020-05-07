@@ -19,3 +19,4 @@ ADD UnlimitedJCEPolicyJDK8/*.jar /usr/local/jvm/jdk1.8.0_172/lib/security/
 # 设置环境变量
 ENV JAVA_HOME /usr/local/jvm/jdk1.8.0_172
 ENV PATH $JAVA_HOME/bin:$PATH
+ENV CLASSPATH=.:./lib:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
