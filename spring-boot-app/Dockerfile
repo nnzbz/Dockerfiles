@@ -16,4 +16,4 @@ WORKDIR /usr/local/myservice
 ENV JAVA_OPTS=""
 
 # 运行服务
-ENTRYPOINT ["/bin/bash", "-c", "java ${JAVA_OPTS} -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC -server -jar myservice.jar --spring.profies.active=prod"]
+ENTRYPOINT ["/bin/bash", "-c", "java ${JAVA_OPTS} -cp . -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC -server -jar myservice.jar --spring.profiles.active=prod"]
